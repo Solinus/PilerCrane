@@ -1,0 +1,1 @@
+antlr -encoding UTF-8 PilerCrane.g4 -o ../src/org/pilercrane/language -no-listener -no-visitor

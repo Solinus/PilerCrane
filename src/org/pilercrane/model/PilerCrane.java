@@ -19,8 +19,13 @@ public class PilerCrane {
 		this.position.setRack(rack);
 		this.position.setShelf(shelf);
 		this.position.setCell(cell);
+		
+		System.out.println("Moved to ("+rack+","+shelf+","+cell+")");
 	}
 	
-	
+	public StoragePosition getPosition() {
+		return position;
+	}
+
 	int boxesLoaded;	//Количество груза на кране
 }

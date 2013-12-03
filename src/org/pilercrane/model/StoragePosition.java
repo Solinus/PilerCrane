@@ -46,7 +46,7 @@ public class StoragePosition {
 	public void setCell(int cell) throws MovingException {
 		if(cell<0) {
 			throw new MovingException("number of cell can't be under zero");
-		} else if(cell > storage.getShelves()) {
+		} else if(cell > storage.getCellsInShelf()) {
 			throw new MovingException("number of cell is too large");
 		}
 		this.cell = cell;

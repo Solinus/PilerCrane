@@ -7,6 +7,10 @@ public class Storage {
 	Cell[][][] cells = new Cell[racks][shelves][cellsInShelf];
 	
 	PilerCrane crane = new PilerCrane(this);
+	
+	public Storage() {
+		fillStorage();
+	}
 
 	public PilerCrane getCrane() {
 		return crane;
@@ -22,5 +26,19 @@ public class Storage {
 
 	public int getCellsInShelf() {
 		return cellsInShelf;
+	}
+	
+	public void executeQuery(String query) {
+		System.out.println(query);
+	}
+	
+	private void fillStorage() {
+		for(int i = 0;i<racks;i++) {
+			for(int j = 0;j<shelves;j++) {
+				for(int k = 0;k<cellsInShelf;k++) {
+					cells[i][j][k].setBoxes((int) Math.random()*20);  
+				}
+			}
+		}
 	}
 }
